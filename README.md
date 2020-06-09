@@ -8,53 +8,22 @@ The virtual disk is simulated by an array of memory blocks, where each block is 
 ## 2. Interface
 
 The complete public interface of the file system for this virtual disk is the following:
+
 * **void format()** - Creates the initial structure on the virtual disk, writing the FAT and the root directory into the virtual disk
 
 * **MyFILE * myfopen ( const char * filename, const char * mode )** - Opens a file on the virtual disk and manages a buffer for it of size **BLOCKSIZE**, mode may be either “r” for read-only or “w” for read/write/append (default “w”)
 
 * **void myfclose ( MyFILE * stream )** - Closes the file, writes out any blocks not written to disk
 
-int myfgetc ( MyFILE * stream )
- Returns the next byte of the open file, or EOF (EOF == -1)
- Steps:
-o assign a variable which holds the current block number
-o check whether the block number is EOC or the file is in read mode
-and return if not
-o if the writer pointer has reached BLOCKSIZE
-- get next buffer block number from the FAT block chain
-- copy the virtual disk data to the buffer block used for
-reading
-- reset character writer pointer
-o return the read character and increment write pointer
-void myfputc ( int b, MyFILE * stream )
- Writes a byte to the file. Depending on the write policy, either writes the
-disk block containing the written byte to disk, or waits until block is full
- Steps:
-o return if the file is in read mode
-o if the write pointer is BLOCKSIZE
-- get the next unused block
-- assign the next FAT entry to point to the next unused block
-- reset the write pointer to the beginning of the stream
-- write the stream buffer to the virtual disk
-- clean the buffer data
-- assign the next unused block to buffer
-o write the character to the file and increment the write pointer
-position
-void mymkdir ( const char * path )
- The function creates a new directory, using path, e.g. mymkdir
-(“/first/second/third”) creates directory “third” in parent dir “second”,
-which is a subdir of directory “first”, and “first is a sub directory of the root
-directory
+* **int myfgetc ( MyFILE * stream )** - Returns the next byte of the open file, or EOF (EOF == -1)
 
-char ** mylistdir (const char * path)
- Lists the content of a directory and returns a list of strings, where the last
-element is NULL
+* **void myfputc ( int b, MyFILE * stream )** - Writes a byte to the file. Depending on the write policy, either writes the disk block containing the written byte to disk, or waits until block is full
 
-void mychdir ( const char * path )
- The function changes the current directory into an existing directory,
-using path, e.g. mkdir (“/first/second/third”) creates directory “third” in
-parent dir “second”, which is a subdir of directory “first”, and “first is a sub
-directory of the root directory
+* **void mymkdir ( const char * path )** - The function creates a new directory, using path, e.g. mymkdir(“/first/second/third”) creates directory “third” in parent dir “second”, which is a subdir of directory “first”, and “first is a sub directory of the root directory
+
+* **char ** mylistdir (const char * path)** - Lists the content of a directory and returns a list of strings, where the last element is NULL
+
+* **void mychdir ( const char * path )** - The function changes the current directory into an existing directory, using path, e.g. mkdir (“/first/second/third”) creates directory “third” in parent dir “second”, which is a subdir of directory “first”, and “first is a sub directory of the root directory
 
 * **void myremove ( const char * path )** - Removes an existing file, using path, e.g. myremove
 (“/first/second/third/testfile.txt”)
