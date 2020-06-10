@@ -80,10 +80,10 @@ deletes source file (reuses “myfcopy” and “myremove” functions)
 
 2. If you don’t have a compiler already installed you will need to run the following apt-get commands in the terminal to install GNU c/c++ compiler:
 
-  ```
-  $ sudo apt-get update
-  $ sudo apt-get install build-essential manpages-dev
-  ```
+    ```
+    $ sudo apt-get update
+    $ sudo apt-get install build-essential manpages-dev
+    ```
 
 3. Navigate to the program directory using the command ‘cd’ and type in ‘make' to compile the program (since we have a Makefile). (additional command ‘make clean’ to clean up the compilation files)
 
