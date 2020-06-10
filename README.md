@@ -62,31 +62,32 @@ deletes source file (reuses “myfcopy” and “myremove” functions)
 #### (!) Before you start make sure u have all the files required in the same directory: filesys.c, filesys.h, shell.c and Makefile.
 
 ### On Windows:
-* You will need to install C compiler if you don’t have one, such as GCC (https://gcc.gnu.org/). If you are on a Windows computer, you can run the command ‘gcc -v’ to check if it’s already installed.
 
-* Open the command prompt by going to the Start button and typing ‘cmd' in the search or run bar (or click on Command Prompt if provided).
+1. You will need to install C compiler if you don’t have one, such as GCC (https://gcc.gnu.org/). If you are on a Windows computer, you can run the command ‘gcc -v’ to check if it’s already installed.
 
-* Change your directory to where you have your C program (in our casefilesys.c, filesys.h, shell.c and Makefile.) using the command ‘cd’. We need to pass the name of the directory in which the program is stored.
+2. Open the command prompt by going to the Start button and typing ‘cmd' in the search or run bar (or click on Command Prompt if provided).
+
+3. Change your directory to where you have your C program (in our casefilesys.c, filesys.h, shell.c and Makefile.) using the command ‘cd’. We need to pass the name of the directory in which the program is stored.
   o Example: cd Desktop (if the program is already in the user directory)
 
-* Compile the source code by typing ‘make’ in the Command Prompt (compilation is automatically done by the Makefile). (additional command ‘make clean’ to clean up the compilation files)
+4. Compile the source code by typing ‘make’ in the Command Prompt (compilation is automatically done by the Makefile). (additional command ‘make clean’ to clean up the compilation files)
 
-* Run the executable file by typing the name of the executable file without the extension (in our case ‘shell’) and hit ‘Enter’.
+5. Run the executable file by typing the name of the executable file without the extension (in our case ‘shell’) and hit ‘Enter’.
 
 ### On Linux:
 
-* Open the terminal window.
+1. Open the terminal window.
 
-* If you don’t have a compiler already installed you will need to run the following apt-get commands in the terminal to install GNU c/c++ compiler:
+2. If you don’t have a compiler already installed you will need to run the following apt-get commands in the terminal to install GNU c/c++ compiler:
 
 ```
 $ sudo apt-get update
 $ sudo apt-get install build-essential manpages-dev
 ```
 
-* Navigate to the program directory using the command ‘cd’ and type in ‘make' to compile the program (since we have a Makefile). (additional command ‘make clean’ to clean up the compilation files)
+3. Navigate to the program directory using the command ‘cd’ and type in ‘make' to compile the program (since we have a Makefile). (additional command ‘make clean’ to clean up the compilation files)
 
-4) To run the executable just type in ‘./<name of file>’ (‘./shell’ in our case) and hit ‘Enter’.
+4. To run the executable just type in ‘./<name of file>’ (‘./shell’ in our case) and hit ‘Enter’.
 
 ### In case Makefile is missing you can compile the program manually using the following commands:
 
