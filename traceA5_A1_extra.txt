@@ -1,0 +1,24 @@
+
+Directory contents: 
+
+	testfile1.txt	||
+
+
+Directory contents: 
+
+	testfile1.txt	||
+
+
+Current directory -> firstdir
+
+Current directory -> seconddir
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019
+
+Current directory -> thirddir
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019
+
+Current directory -> firstdir
+
+Current directory -> seconddir
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019

@@ -1,0 +1,12 @@
+
+Directory contents: 
+
+	mythirddir	||
+
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019
+
+Directory contents: 
+
+	mythirddir	||	testfile.txt	||
+
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019

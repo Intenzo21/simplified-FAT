@@ -1,0 +1,2 @@
+virtualdisk[0] = CS3026 Operating Systems Assessment 2019
+writedisk> virtualdisk[0] = CS3026 Operating Systems Assessment 2019
