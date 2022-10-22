@@ -1,4 +1,4 @@
-# simplified-FAT
+# Simplified File Allocation Table (FAT)
 ## 1. Description
 
 The program is an attempt to implement a simple file system that allows managing files and directories in a virtual in-memory disk. The file system is based on simplified concepts of a File Allocation Table (<a href="https://en.wikipedia.org/wiki/File_Allocation_Table" target="_blank">**FAT**</a>). It allows the creation of files and directories within this virtual hard disk and the performance of simple read and write operations on files.
